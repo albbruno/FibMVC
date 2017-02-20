@@ -1,0 +1,17 @@
+﻿@model FibMVC.Models.FibonacciMdl
+
+@using (Html.BeginForm())
+{
+    @Html.TextBoxFor(model => model.lengthOfFibo)
+    @Html.TextBoxFor(model => model.lengthOfFibo)
+    @Html.ValidationMessageFor(model => model.lengthOfFibo)
+    <button type="submit">Activate Sequece!!</button>
+}
+
+<br />
+
+@foreach (var item in (Model.GetNumbers(Model.lengthOfFibo) as List<int>))
+{
+    @Html.DisplayFor(x => item)
+    <br />
+}
