@@ -1,0 +1,25 @@
+﻿@model FibMVC.Models.Test
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @foreach (var item in (Model.GetNumbers(15) as List<int>))
+        {
+            @Html.DisplayFor(x => item)
+            <br />
+        }
+    </div>
+
+    @Html.ActionLink("Next Page", "FiboPage", "Fibo")
+</body>
+</html>
