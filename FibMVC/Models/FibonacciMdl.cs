@@ -10,9 +10,9 @@ namespace FibMVC.Models
     public class FibonacciMdl
     {
         Fibo fiboObj = new Fibo();
-        public string test;
+        public string test { get; set; }
 
-        public int lengthOfFibo;
+        public int lengthOfFibo { get; set; }
 
         public List<int> GetNumbers(int lngth)
         {
