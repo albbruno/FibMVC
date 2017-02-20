@@ -12,12 +12,7 @@ namespace FibMVC.Models
         Fibo fiboObj = new Fibo();
         public string test;
 
-        [Required]
         public int lengthOfFibo;
-
-        public FibonacciMdl()
-        {
-        }
 
         public List<int> GetNumbers(int lngth)
         {

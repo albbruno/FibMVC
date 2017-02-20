@@ -2,10 +2,11 @@
 
 @using (Html.BeginForm())
 {
-    @Html.TextBoxFor(model => model.lengthOfFibo)
-    @Html.TextBoxFor(model => model.lengthOfFibo)
-    @Html.ValidationMessageFor(model => model.lengthOfFibo)
-    <button type="submit">Activate Sequece!!</button>
+    @Html.TextBoxFor(x => x.lengthOfFibo, new { @placeholder = "place the magic number here" })
+    <br />
+    @Html.TextBoxFor(x => x.test, new { @placeholder = "testing input" })
+
+    <input type="submit" value="Activate Sequence!" />
 }
 
 <br />

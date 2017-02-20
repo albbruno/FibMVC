@@ -24,10 +24,11 @@ namespace FibMVC.Controllers
         [HttpGet]
         public PartialViewResult FiboPartial()
         {
-            //FibonacciMdl fMdl = new FibonacciMdl();
-            return PartialView();
+            FibonacciMdl fMdl = new FibonacciMdl();
+            return PartialView(fMdl);
         }
 
+        //not passing in data through submit?
         [HttpPost]
         public PartialViewResult FiboPartial(FibonacciMdl fMdl)
         {
